@@ -47,6 +47,7 @@ func loadRancherDefaultK8sVersions() map[string]string {
 		"2.7.4":        "v1.25.x",
 		"2.7.5":        "v1.26.x",
 		"2.7.6":        "v1.26.x",
+		"2.7.9":        "v1.26.x",
 		// rancher will use default if its version is absent
 		"default": "v1.27.x",
 	}
