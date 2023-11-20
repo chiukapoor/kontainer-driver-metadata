@@ -10,6 +10,12 @@ defaults:
     - application/vnd.oci.image.manifest.v1+json
     - application/vnd.oci.image.index.v1+json
 sync:
+  - source: docker.io/csociety/hyperkube
+    target: '{{ env "REGISTRY_ENDPOINT" }}/csociety/hyperkube'
+    type: repository
+    tags:
+      allow:
+        - v1.26.9-rancher1-amd64
   - source: docker.io/rancher/calico-cni
     target: '{{ env "REGISTRY_ENDPOINT" }}/rancher/calico-cni'
     type: repository
@@ -1016,9 +1022,3 @@ sync:
         - v1.26.9-rke2r1
         - v1.27.5-rke2r1
         - v1.27.6-rke2r1
-  - source: docker.io/rayandas/hyperkube
-    target: '{{ env "REGISTRY_ENDPOINT" }}/rayandas/hyperkube'
-    type: repository
-    tags:
-      allow:
-        - v1.25.15-rancher1
